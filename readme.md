@@ -1,6 +1,6 @@
 # Sudoku Game
 
-A simple Sudoku game implemented in Python using the Tkinter library.
+A Sudoku puzzle game written in Python using the Tkinter library
 
 ## Table of Contents
 
@@ -10,13 +10,12 @@ A simple Sudoku game implemented in Python using the Tkinter library.
   - [Installation](#installation)
 - [Running the Game](#running-the-game)
 - [Game Controls](#game-controls)
-- [Solving the Puzzle](#solving-the-puzzle)
 - [Additional Information](#additional-information)
-- [License](#license)
+
 
 ## Overview
 
-This project implements a Sudoku game with a graphical user interface (GUI) using Python and Tkinter. Players can interactively solve the Sudoku puzzle and check their solutions.
+This project implements a Sudoku game with a graphical user interface using Python and Tkinter, players can interactively solve the Sudoku puzzle and check their solutions.
 
 ## Getting Started
 
@@ -32,22 +31,40 @@ Make sure you have the following installed:
 
 ### Installation
 
-1. 
+1.  pip install tk
 
 # Running the Game
 
 - Download attached file that was submitted for this assignmtnt Sudoku-Puzzle-3680.py and run in Visual Studio Code
+
+- or you can use github
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/ethansled/Sudoku-Puzzle-3680.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd Final_Project-3680
+    ```
+
+3. Run the game:
+
+    ```bash
+    python Sudoku-Puzzle-3680.py
+    ```
 
 # Game Controls
 
 - The Sudoku puzzle is displayed in a 9x9 grid.
 - Click on a cell to select it.
 - Use the keyboard to enter numbers into the selected cell.
-- Press the "Check" button to verify the correctness of the entered value.
+- Press the "Check" button to verify if the answer was correct.
 - Press the "Solve Board" button to automatically solve the entire puzzle.
 - Press the "End Game" button to exit the application.
-
-# Solving the Puzzle 
 
 
 # Additional Information

@@ -14,7 +14,7 @@ class SudokuGame:
         #redirect stdout to a file
         sys.stdout = open('game_results.txt', 'w')
 
-        #initialize the SudokuGame object
+        #initialize the sudok object
         self.root = tk.Tk()
         self.root.title("Sudoku-Puzzle-3680")
         self.attempts = 0
@@ -28,7 +28,7 @@ class SudokuGame:
         self.create_gui()
 
     def generate_sudoku(self):
-        #generate a Sudoku puzzle
+        #generate a sudoku puzzle game
         base = 3
         side = base * base
 
@@ -53,11 +53,11 @@ class SudokuGame:
         return board
 
     def create_gui(self):
-        #create the main frame of the GUI
+        #creates the main frame of the gui
         self.main_frame = tk.Frame(self.root, bg="light green")
         self.main_frame.grid(padx=10, pady=10)
 
-        #create the grid of cells for the Sudoku puzzle
+        #creates the grid of cells for the sudoku puzzle
         self.cells = [[None for _ in range(9)] for _ in range(9)]
         for i in range(9):
             for j in range(9):
@@ -70,14 +70,14 @@ class SudokuGame:
                     bg="light green",
                 )
                 if value != 0:
-                    #if the cell has a pre-filled value, insert and disable it
+                    #if the cell has a prefilled value, insert and disabl it
                     self.cells[i][j].insert(0, str(value))
                     self.cells[i][j].config(state="disabled")
 
                 self.cells[i][j].grid(row=i, column=j, padx=1, pady=1)
                 self.cells[i][j].bind("<FocusIn>", lambda event, i=i, j=j: self.cell_focus_in(i, j))
 
-        #create the label displaying the number of moves made
+        #creates the label displaying the number of moves made
         self.attempts_label = tk.Label(self.main_frame, text="Moves Made: 0", bg="light green")
         self.attempts_label.grid(row=10, column=0, pady=5, columnspan=9)
 
@@ -85,7 +85,7 @@ class SudokuGame:
         self.clock_label = tk.Label(self.main_frame, text="Time: 00:00", bg="light green")
         self.clock_label.grid(row=11, column=0, pady=5, columnspan=9)
 
-        #create the Check, Solve, and End Game buttons on the right side
+        #creates the check, solve, and end Game buttons on the right side
         btn_check = tk.Button(
             self.main_frame, text="Check", command=self.check_cell, bg="light green"
         )
@@ -101,7 +101,7 @@ class SudokuGame:
         )
         btn_end.grid(row=2, column=10, pady=5, padx=5, sticky="ew")
 
-        #set up a timer to update the clock every second
+        #sets up a timer to update the clock every second
         self.root.after(1000, self.update_clock)
 
         #call update clock at the end of create gui
@@ -114,7 +114,7 @@ class SudokuGame:
         self.current_cell = (i, j)
 
     def check_cell(self):
-        #check the user's input for correctness
+        #check the users input for correctness
         if self.current_cell is not None:
             i, j = self.current_cell
             self.attempts += 1
@@ -203,7 +203,7 @@ class SudokuGame:
             messagebox.showwarning("Incorrect", "Some cells are incorrect. Keep trying!")
 
     def solve_sudoku(self, board):
-        #solve the Sudoku puzzle using backtracking
+        #solve the sudoku puzzle using backtracking
         empty = self.find_empty(board)
         if not empty:
             return board
