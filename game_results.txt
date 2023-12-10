@@ -1,8 +1,0 @@
-Checking Cell (1, 2): User Value: 2, Correct Value: 3
-user_value: 2, correct_value: 3
-Checking Cell (1, 2): User Value: 3, Correct Value: 3
-Checking Cell (1, 3): User Value: 2, Correct Value: 2
-Checking Cell (1, 5): User Value: 7, Correct Value: 7
-Checking Cell (1, 6): User Value: 9, Correct Value: 6
-user_value: 9, correct_value: 6
-Checking Cell (1, 6): User Value: 6, Correct Value: 6
